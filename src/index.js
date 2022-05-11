@@ -7,11 +7,13 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 // wrap our application inside of router to enable using router
 ReactDOM.render(
-  <Router>
+
       <React.StrictMode>
+      <Router>
       <App />
-      </React.StrictMode>
-  </Router>,
+      </Router>,
+      </React.StrictMode>,
+  
   document.getElementById("root")
   );
 
