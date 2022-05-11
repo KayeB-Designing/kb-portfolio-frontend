@@ -9,23 +9,19 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 
 function App() {
+  const URL = "https://kb-portfolio-lab.herokuapp.com/"
   return (
-    <div className="App">
-      const URL = "https://kb-portfolio-lab.herokuapp.com/";
+      <div className="App">
+      
       <Header />
       <Routes>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/projects">
-          <Projects URL={"https://kb-portfolio-lab.herokuapp.com/projects/"} />
-        </Route>
-        <Route path="/about">
-          <About URL={"https://kb-portfolio-lab.herokuapp.com/about/"} />
-        </Route>
+        <Route exact path="/" element={< Home />}/>
+        <Route path="/projects" element= {< Projects URL={URL}/>} /> 
+        <Route path="/about" element={< About URL={URL}/>}/>
       </Routes>
       <Footer />
     </div>
+
   );
 }
 
